@@ -173,7 +173,7 @@ client.on("message", async message => {
         m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
     }
     if (command === "say") {
-        if (!message.member.roles.some(r => ["Mods", "Mucho Importante Spaghetti"].includes(r.name)) && (!message.author.username === "Smitsey")) {
+        if (!message.member.roles.some(r => ["Mods", "Mucho Importante Spaghetti"].includes(r.name))) {
             return message.reply("you don't have permission to use this command!");
         } else {
             // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
@@ -383,7 +383,7 @@ client.on("message", async message => {
         }
     }
     if (command === "purge") {
-        if (!message.member.roles.some(r => ["Mods", "Mucho Importante Spaghetti"].includes(r.name)) && (!message.author.username === "Smitsey")) {
+        if (!message.member.roles.some(r => ["Mods", "Mucho Importante Spaghetti"].includes(r.name))) {
             return message.reply("you don't have permission to use this command!");
         }
         const deleteCount = parseInt(args[0], 10);
@@ -421,7 +421,7 @@ client.on("message", async message => {
         })
     }
     if (command === "live") {
-        if (!message.member.roles.some(r => ["Turnabout Member", "Mods", "Mucho Importante Spaghetti"].includes(r.name)) && (!message.author.username === "Smitsey")) {
+        if (!message.member.roles.some(r => ["Turnabout Member", "Mods", "Mucho Importante Spaghetti"].includes(r.name))) {
             return message.reply("you don't have permission to use this command!");
         }
         var fs = require("fs");
