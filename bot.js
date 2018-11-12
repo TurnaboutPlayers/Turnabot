@@ -437,6 +437,9 @@ client.on("message", async message => {
         }
 
     }
+    if (command === "reload") {
+        message.delete().catch(O_o => { });
+    }
 });
 
 client.login(config.token);
